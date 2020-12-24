@@ -30,12 +30,7 @@ const App = () => {
     setLoading(false);
   };
 
-  // get images on page load
-  useEffect(async () => {
-    getImageData(search);
-  }, []);
-
-  // get search images
+  // get images using hooks
   useEffect(async () => {
     if (search.length > 0) {
       searchImageData(search);
